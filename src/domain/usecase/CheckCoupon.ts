@@ -1,4 +1,4 @@
-import Coupon from "./Coupon";
+import Coupon from "../entity/Coupon";
 
 export default class CheckCoupon {
   coupons: Coupon[];
@@ -9,7 +9,7 @@ export default class CheckCoupon {
     ];
   }
   async execute(code: string): Promise<boolean> {
-    const coupon = this.coupons.find((c) => c.description === code);
+    const coupon = this.coupons.find((c) => c.code === code);
     if (!coupon || (coupon && coupon.isExpired())) throw new Error("Coupon invalid");
     return true;
   }

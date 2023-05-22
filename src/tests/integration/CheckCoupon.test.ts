@@ -1,4 +1,4 @@
-import CheckCoupon from "./CheckCoupon";
+import CheckCoupon from "../../domain/usecase/CheckCoupon";
 
 test("Deve retornar um erro ao verificiar que um cupom é invalido", async () => {
   const checkCoupon = new CheckCoupon();

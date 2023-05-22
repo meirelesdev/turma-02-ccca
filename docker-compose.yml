@@ -3,6 +3,7 @@ version: '3'
 services:
   postgres:
     image: postgres:11-alpine3.17
+    container_name: t2
     restart: always
     environment:
       POSTGRES_USER: admin
